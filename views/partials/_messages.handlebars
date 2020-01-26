@@ -1,0 +1,39 @@
+{{!-- warnings and updates --}}
+{{#if errors}}
+
+{{#each errors}}
+<strong>
+  <p class="flow-text red-text">
+  {{msg}}
+</p>
+</strong>
+
+{{/each}}
+
+{{else}}
+
+{{/if}}
+
+{{!-- flash messages --}}
+
+{{#if success_msg}}
+<strong>
+  <p class="flow-text green-text">
+  {{success_msg}}
+</p>
+</strong>
+
+{{else}}
+
+{{/if}}
+
+{{#if error_msg}}
+<strong>
+  <p class="flow-text red-text">
+  {{error_msg}}
+</p>
+</strong>
+
+{{else}}
+
+{{/if}}

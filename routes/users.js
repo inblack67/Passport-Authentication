@@ -1,6 +1,7 @@
 const epxress = require('express');
 const router = epxress.Router();
 const bcrypt = require('bcryptjs');
+const passport = require('passport');
 
 // models
 const User = require('../models/User');
@@ -99,6 +100,24 @@ router.post('/register', (req,res) => {
     })
     ;
   }
+});
+
+
+// login done
+router.post('/login', (req,res,next) => {
+  passport.authenticate('local', {
+    successRedirect: '/dashboard',
+    failureRedirect: '/users/login',
+    failureFlash: true
+  })(req,res,next);       // using local strategy
+});
+
+
+// logging out
+router.get('/logout', (req,res) => {
+  req.logout(); // by passport ofc
+  req.flash('success_msg', 'Logged Out');
+  res.redirect('/users/login');
 });
 
 module.exports = router;

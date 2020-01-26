@@ -5,24 +5,30 @@
 
 
 <div class="row">
-<form class="col s12">
+<form class="col s12" method="POST" action="/users/login">
 <div class="row">
 
 <div class="row">
 <div class="input-field col s12">
-<input id="email" type="email" class="validate">
+<input id="email" type="email" class="validate" name="email">
 <label for="email">Email</label>
 </div>
 </div>
 
 <div class="row">
 <div class="input-field col s12">
-<input id="password" type="password" class="validate">
+<input id="password" type="password" class="validate" name="password">
 <label for="password">Password</label>
 </div>
 </div>
 
 <input type="submit" class="black btn pulse" value="Submit">
+
+<br><br>
+<hr>
+
+<p class="flow-text">
+Don't Have An Account? <a class="red-text" href="/users/register">Register</a>
 
 </form>
 </div>

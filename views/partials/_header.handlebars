@@ -3,10 +3,16 @@
 <div class="container">
 <div class="nav-wrapper">
 <a href="/" class="brand-logo left">Passport | Auth</a>
+{{#if user}}
+
+{{else}}
+
 <ul class="right">
 <li><a href="/users/login">Login</a></li>
 <li><a href="/users/register">Register</a></li>
 </ul>
+
+{{/if}}
 </div>
 </div>
 </nav>

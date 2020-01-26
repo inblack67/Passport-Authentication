@@ -18,10 +18,16 @@
 <p class="grey-text text-lighten-4">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
 </div>
 <div class="col l4 offset-l2 s12">
-<h5 class="white-text">Gotos</h5>
+<h5 class="white-text">Links</h5>
 <ul>
+{{#if user}}
+<li><a href="/users/logout" class="grey-text text-lighten-3">Logout</a></li>
+
+{{else}}
 <li><a class="grey-text text-lighten-3" href="/users/login">Login</a></li>
 <li><a class="grey-text text-lighten-3" href="/users/register">Register</a></li>
+
+{{/if}}
 </ul>
 </div>
 </div>
